@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Time Management Assistant</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Smart Time Management Assistant</h1>
+    <div id="clock"></div>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <main class="container">
+    <form id="taskForm">
+      <input type="text" id="taskName" placeholder="Task Name" required>
+      <input type="time" id="startTime" required>
+      <input type="time" id="endTime" required>
+      <select id="category">
+        <option value="study">Study</option>
+        <option value="exercise">Exercise</option>
+        <option value="break">Break</option>
+        <option value="other">Other</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div id="warning" class="warning"></div>
+    <div id="progressContainer">
+      <div id="progressBar"></div>
+    </div>
+    <div id="feedback"></div>
+    <section id="taskList"></section>
+    <section id="summary"></section>
+    <button id="resetBtn">Reset All</button>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
