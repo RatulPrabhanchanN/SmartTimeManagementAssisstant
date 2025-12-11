@@ -1,0 +1,105 @@
+:root {
+  --primary: #3f6ffe;
+  --bg: #f6f8fa;
+  --card: #fff;
+  --text: #222;
+}
+body.dark {
+  --bg: #1e1e1e;
+  --card: #2a2a2a;
+  --text: #eee;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  color: #fff;
+  padding: 15px;
+}
+#themeToggle {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 700px;
+  margin: 25px auto;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+.task-card {
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+.study { background: #2ecc71; }
+.exercise { background: #3498db; }
+.break { background: #f1c40f; color: #000; }
+.other { background: #7f8c8d; }
+
+.warning { color: red; margin-top: 10px; font-weight: bold; }
+
+#progressContainer {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+#progressBar {
+  height: 10px;
+  width: 0%;
+  background: #2ecc71;
+  border-radius: 6px;
+  transition: width 0.5s;
+}
+
+#feedback {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
